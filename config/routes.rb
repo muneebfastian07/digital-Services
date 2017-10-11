@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'team' => 'team#index'
   get 'careers' => 'careers#index'
   get 'press' => 'press#index'
+  get 'contact' => 'contact#index'
+  get 'apply' => 'apply#index'
 
   # customer_stories
   get 'customer-stories/staples-print-facility' => 'customer_stories#staples'
