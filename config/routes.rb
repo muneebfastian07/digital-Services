@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get 'contact' => 'contact#index'
   get 'apply' => 'apply#index'
 
+  #signup
+  get 'signup' => 'signup#index'
+  get 'signup/terms' => 'signup#terms'
+
   # login
   get 'login' => 'login#index'
   get 'login/office' => 'login#office'
@@ -27,7 +31,6 @@ Rails.application.routes.draw do
   get 'customer-stories/charity-water' => 'customer_stories#charity'
   get 'customer-stories/bond-street' => 'customer_stories#bond'
   get 'customer-stories/seatgeek' => 'customer_stories#seatgeek'
-
 
   # blog
   get 'blog' => 'blog#index'
