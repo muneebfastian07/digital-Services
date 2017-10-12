@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   get 'services' => 'services#index'
   get 'people' => 'people#index'
   get 'technology' => 'technology#index'
-  get 'customer-stories' => 'customer_stories#index'
   get 'office-moving-guide' => 'office_movies#index'
   get 'allhands' => 'all_hands#index'
-  get 'blog' => 'blog#index'
 
   get 'story' => 'story#index'
   get 'team' => 'team#index'
@@ -18,7 +16,13 @@ Rails.application.routes.draw do
   get 'contact' => 'contact#index'
   get 'apply' => 'apply#index'
 
+  # login
+  get 'login' => 'login#index'
+  get 'login/office' => 'login#office'
+  get 'login/partners' => 'login#partners'
+
   # customer_stories
+  get 'customer-stories' => 'customer_stories#index'
   get 'customer-stories/staples-print-facility' => 'customer_stories#staples'
   get 'customer-stories/charity-water' => 'customer_stories#charity'
   get 'customer-stories/bond-street' => 'customer_stories#bond'
@@ -26,7 +30,8 @@ Rails.application.routes.draw do
 
 
   # blog
-   get '/blog/building-a-trustworthy-marketplace', to: 'blog#building'
-   get '/blog/ellen-pao-on-solving-techs-diversity-challenges', to: 'blog#ellen'
-   get '/blog/creating-a-world-class-office-experience-with-hivy', to: 'blog#creating'
+  get 'blog' => 'blog#index'
+  get '/blog/building-a-trustworthy-marketplace', to: 'blog#building'
+  get '/blog/ellen-pao-on-solving-techs-diversity-challenges', to: 'blog#ellen'
+  get '/blog/creating-a-world-class-office-experience-with-hivy', to: 'blog#creating'
 end

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Login | Managed by Q</title>
+  <link rel="icon" href="https://i.imgur.com/tnLjGcp.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="https://cdn.auth0.com/js/base64.js"></script>
+  <script src="https://cdn.auth0.com/js/es5-shim.min.js"></script>
+  <![endif]-->
+
+  <script src="https://cdn.auth0.com/js/lock/10.9/lock.min.js"></script>
+  <script>
+    // Decode utf8 characters properly
+    var config = JSON.parse(decodeURIComponent(escape(window.atob('eyJhc3NldHNVcmwiOiIiLCJhdXRoMERvbWFpbiI6Im1hbmFnZWRieXEuYXV0aDAuY29tIiwiY2FsbGJhY2tPbkxvY2F0aW9uSGFzaCI6ZmFsc2UsImNhbGxiYWNrVVJMIjoiaHR0cHM6Ly9kYXNoYm9hcmQubWFuYWdlZGJ5cS5jb20vYXV0aC9jYWxsYmFjayIsImNkbiI6Imh0dHBzOi8vc2RrLmF1dGgwLmNvbS8iLCJjbGllbnRJRCI6IlJDY0ZaZEpwaFRNeHZISk91VG1PbFA5NXlyNFhDSlNqIiwiZGljdCI6eyJzaWduaW4iOnsidGl0bGUiOiJPTUQgKHByZCkifX0sImV4dHJhUGFyYW1zIjp7InJldHVyblVybCI6Ii8iLCJhdXRoRXJyb3IiOiIiLCJfY3NyZiI6Ik9DU0dheldnLUVHSEpNNTYyZXYxMzgyX3hqWVY3V0NKYkFGWSJ9LCJpbnRlcm5hbE9wdGlvbnMiOnsicmV0dXJuVXJsIjoiLyIsImF1dGhFcnJvciI6IiIsIl9jc3JmIjoiT0NTR2F6V2ctRUdISk01NjJldjEzODJfeGpZVjdXQ0piQUZZIn0sInByb21wdCI6ZmFsc2UsIndpZGdldFVybCI6Imh0dHBzOi8vY2RuLmF1dGgwLmNvbS93Mi9hdXRoMC13aWRnZXQtNS4xLm1pbi5qcyIsImlzVGhpcmRQYXJ0eUNsaWVudCI6ZmFsc2UsImF1dGhvcml6YXRpb25TZXJ2ZXIiOnsidXJsIjoiaHR0cHM6Ly9tYW5hZ2VkYnlxLmF1dGgwLmNvbSJ9fQ=='))));
+    config.extraParams = config.extraParams || {};
+    var connection = config.connection;
+    var prompt = config.prompt;
+    
+    var params = config.internalOptions;
+
+    if (config.extraParams.returnUrl) {
+      params.state = window.btoa(JSON.stringify({
+        returnUrl: config.extraParams.returnUrl
+      }));
+    }
+    
+    params.scope = 'openid app_metadata name email';
+    
+    var title;
+    var callbackUrl = config.callbackURL || '';
+    var omdUrlRegEx = /\/\/dashboard/;
+    var pdUrlRegEx = /\/\/partners/;
+
+    if (omdUrlRegEx.test(callbackUrl)) {
+      title = 'Office Dashboard';
+    } else if (pdUrlRegEx.test(callbackUrl)) {
+      title = 'Partner Dashboard';
+    } else {
+      title = 'Log In';
+    }
+    
+    var lockOptions = {
+      auth: {
+        redirectUrl: config.callbackURL,
+        responseType: config.callbackOnLocationHash ? 'token' : 'code',
+        params: params
+      },
+      assetsUrl:  config.assetsUrl,
+      allowedConnections: connection ? [connection] : null,
+      rememberLastLogin: !prompt,
+      languageDictionary: {
+        title: title
+      },
+      hashCleanup: true,
+      theme: {
+        logo: 'https://i.imgur.com/tnLjGcp.png',
+        primaryColor: '#44b44e'
+      },
+      prefill: null,
+      closable: false
+    };
+    var lock = new Auth0Lock(config.clientID, config.auth0Domain, lockOptions);
+    if (config.extraParams.authError) {
+      lock.show({
+        flashMessage:{
+          type: 'error',
+          text: config.extraParams.authError
+        }
+      });
+    } else if (config.extraParams.successMessage) {
+      lock.show({
+        flashMessage:{
+          type: 'success',
+          text: config.extraParams.successMessage
+        }     
+      });
+    } else {
+      lock.show();
+    }
+  </script>
+</body>
+</html>
