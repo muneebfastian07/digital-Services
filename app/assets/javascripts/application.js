@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
-//= require_tree .
+//= require cable
+//= require jquery-1.7.1
+//= require Managed_by_Q_August2017-main.min
+//= require public_common
+//= require scripts.min
+//= require v2
+//= require vendor.min
