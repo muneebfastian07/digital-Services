@@ -14,4 +14,8 @@ class BlogController < ApplicationController
   def creating
     render 'creating', layout: false
   end
+
+  def efficiency
+    render 'efficiency', layout: false
+  end
 end

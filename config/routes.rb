@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'people' => 'people#index'
   get 'technology' => 'technology#index'
   get 'office-moving-guide' => 'office_movies#index'
-  get 'allhands' => 'all_hands#index'
 
   get 'story' => 'story#index'
   get 'team' => 'team#index'
@@ -15,6 +14,12 @@ Rails.application.routes.draw do
   get 'press' => 'press#index'
   get 'contact' => 'contact#index'
   get 'apply' => 'apply#index'
+  get 'partners' => 'partners#index'
+
+  #allhands
+  get 'allhands' => 'all_hands#index'
+  get 'category/effortless-office' => 'all_hands#category'
+  get '/article/work-wifi-speed-troubleshooting' => 'all_hands#work'
 
   #signup
   get 'signup' => 'signup#index'
@@ -37,4 +42,5 @@ Rails.application.routes.draw do
   get '/blog/building-a-trustworthy-marketplace', to: 'blog#building'
   get '/blog/ellen-pao-on-solving-techs-diversity-challenges', to: 'blog#ellen'
   get '/blog/creating-a-world-class-office-experience-with-hivy', to: 'blog#creating'
+  get '/blog/efficiency-for-every-office', to: 'blog#efficiency'
 end

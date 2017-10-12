@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Marketplace</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <%= stylesheet_link_tag 'partner', media: 'all' %>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="quotes/favicon.3d72dab2beb7.ico"/>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M86VHH9');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M86VHH9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+    <nav class="navbar" id="logged-out">
+      <div class="navbar-header">
+        <a href="http://spa-techdigital.herokuapp.com/"><img src="quotes/q-logo-black.b0163053fb2e.png" id="q-logo"></a>
+      </div>
+    </nav>
+    
+
+  <div class="jumbotron partner-splash">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="hero-text">The best way for service providers <br>to find commercial clients</h2>
+          <div class="col-md-4 col-md-offset-4 hero-form-div" id="partner-lead-form">
+            <form method="POST">
+              <h3 class="partner-form-header">Apply today</h3>
+              <input type='hidden' name='csrfmiddlewaretoken' value='iVNfjzQ5E23l3y5XFnOUQnWAkTdJIkJyQI0kUIt22iSelxB98UiH4nLXt5B29F3G' />
+              
+              <div class="form-group">
+                <input class="form-control" id="id_business_name" maxlength="100" name="business_name" placeholder="Business name" type="text" required />
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="id_business_email" maxlength="254" name="business_email" placeholder="Business email" type="text" required />
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="id_phone_number" maxlength="20" name="phone_number" placeholder="Phone number" type="text" />
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="id_zipcode" maxlength="5" name="zipcode" placeholder="Zipcode (primary location)" type="text" required />
+              </div>
+              <input name="partner-lead-submission" type="submit" value="Request access" role="button" class="primary-button partner-splash-button"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron white-background card-holder">
+    <div class="container">
+
+      <div class="row partner-services-row">
+
+        <div class="col-sm-3 card-wrapper services-cards hidden-xs">
+          <div class="card-media">
+            <img src="quotes/cleaningpartner.984c85887b8b.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Cleaning services</h5>
+            <p class="card-description">Evening cleaning, deep cleaning, carpet cleaning, trash hauling, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-wrapper services-cards hidden-xs">
+          <div class="card-media">
+            <img src="quotes/adminpartner2.c4207d53af53.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Office staffing</h5>
+            <p class="card-description">Executive assistants, receptionists, stocking supplies and unpacking groceries, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-wrapper services-cards hidden-xs">
+          <div class="card-media">
+            <img src="quotes/maintenancepartner.4984536f140c.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Contracting &amp; maintenance</h5>
+            <p class="card-description">Plumbing, electric, appliance repair, painting, office build-outs, furniture assembly, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 card-wrapper services-cards hidden-xs">
+          <div class="card-media">
+            <img src="quotes/itpartner.d4e68f036186.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">IT &amp; security professionals</h5>
+            <p class="card-description">Installing alarm systems, hiring security guards, setting up phones and Internet, and more</p>
+          </div>
+        </div>
+
+
+        <div class="col-sm-3 mobile-card-wrapper hidden-sm hidden-md hidden-lg">
+          <div class="card-media">
+            <img src="quotes/cleaningpartner.984c85887b8b.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Cleaning services</h5>
+            <p class="card-description">Evening cleaning, deep cleaning, carpet cleaning, trash hauling, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mobile-card-wrapper hidden-sm hidden-md hidden-lg">
+          <div class="card-media">
+            <img src="quotes/adminpartner2.c4207d53af53.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Office staffing</h5>
+            <p class="card-description">Executive assistants, receptionists, stocking supplies and unpacking groceries, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mobile-card-wrapper hidden-sm hidden-md hidden-lg">
+          <div class="card-media">
+            <img src="quotes/maintenancepartner.4984536f140c.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">Contracting &amp; maintenance</h5>
+            <p class="card-description">Plumbing, electric, appliance repair, painting, office build-outs, furniture assembly, and more</p>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mobile-card-wrapper hidden-sm hidden-md hidden-lg">
+          <div class="card-media">
+            <img src="quotes/itpartner.d4e68f036186.png">
+          </div>
+          <div class="card-content">
+            <h5 class="card-title">IT &amp; security professionals</h5>
+            <p class="card-description">Installing alarm systems, hiring security guards, setting up phones and Internet, and more</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- the Carousel component -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="12000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="carousel-indicator active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="carousel-indicator"></li>
+          <li data-target="#myCarousel" data-slide-to="2" class="carousel-indicator"></li>
+          <li data-target="#myCarousel" data-slide-to="3" class="carousel-indicator"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="partner-quote-div">
+              <p class="partner-quote-text">
+                "It has been a pleasure working with Q. Due to the amount of leads provided by Q we anticipate that 2017 will be one of our best years. Almost all leads that were provided have closed. As a partner I absolutely love the portal, it's is a simple yet efficient way to provide quotes and communicate with potential clients. The Q process of not having to pay per lead or worry about unpaid invoices has proven to be successful for us. Without the worries we have been able to concentrate on delivering quality services."
+              </p>
+              <div class="partner-quote-attrib-div">
+                <div class="partner-quote-author"><img class="parnter-quote-img" src="quotes/partnerlogo0.4b1f6501b267.png"> Jimmy K, cleaning partner</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="partner-quote-div">
+              <p class="partner-quote-text">
+                "Managed by Q makes it extremely easy for us to connect with and provide painting services for commercial clients in our current markets. Working with their Account Managers makes it a seamless process for us, so we're never chasing anyone down for payment after jobs are complete. Plus, the quality of business that comes from Q is better than any commercial lead-gen resource we've tried in the past."
+              </p>
+              <div class="partner-quote-attrib-div">
+                <div class="partner-quote-author"><img class="parnter-quote-img" src="quotes/partnerlogo1.8f2cf010dc23.png"> Kristen C, painting partner</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="partner-quote-div">
+              <p class="partner-quote-text">
+                "Working with the Managed by Q team has been great! Their customers are always easy to work with and their payments are always on time!"
+              </p>
+              <div class="partner-quote-attrib-div">
+                <div class="partner-quote-author"><img class="parnter-quote-img" src="quotes/partnerlogo2.446ec5a4c63a.png"> Bill T, IT partner</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="partner-quote-div">
+              <p class="partner-quote-text">
+                "We are delighted to work with Managed By Q because they connect us to many businesses we wouldn't know otherwise. Everyone on staff is super helpful and are working diligently to streamline the processes for all concerned."
+              </p>
+              <div class="partner-quote-attrib-div">
+                <div class="partner-quote-author"><img class="parnter-quote-img" src="quotes/partnerlogo3.34199ab294c7.png"> Kater S, moving partner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <div class="jumbotron grey-background">
+    <div class="container">
+
+      <div class="row partner-value-row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-2 admin-value-image">
+            <img class="admin-value-img" src="quotes/thousands.c9a3e06cd50d.png">
+          </div>
+          <div class="col-md-10">
+            <h3>Access thousands of commercial customers</h3>
+            <p class="partner-value-desc">Grow your revenue by reaching some of the fastest-growing workplaces on the Q Marketplace—without worrying about sales or marketing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row partner-value-row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-2 admin-value-image">
+            <img class="admin-value-img" src="quotes/paidfast.d65380104a00.png">
+          </div>
+          <div class="col-md-10">
+            <h3>Get paid fast</h3>
+            <p class="partner-value-desc">We guarantee payment within 30 days of service or sooner.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row partner-value-row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-2 admin-value-image">
+            <img class="admin-value-img" src="quotes/neverpayforleads.cc58be50e128.png">
+          </div>
+          <div class="col-md-10">
+          <h3>Never pay for a lead</h3>
+            <p class="partner-value-desc">Q charges a small transaction fee for completed work, rather than charging you for the leads we send you.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="jumbotron white-background">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-4 col-md-offset-4 hero-form-div">
+            <form method="POST">
+              <h3 class="partner-form-header">Reach out to learn more!</h3>
+              <input type='hidden' name='csrfmiddlewaretoken' value='iVNfjzQ5E23l3y5XFnOUQnWAkTdJIkJyQI0kUIt22iSelxB98UiH4nLXt5B29F3G' />
+              
+              <div class="form-group">
+                <input class="form-control" id="id_business_email" maxlength="254" name="business_email" placeholder="Business email" type="text" required />
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="id_phone_number" maxlength="20" name="phone_number" placeholder="Phone number" type="text" />
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" cols="40" id="id_message" name="message" placeholder="Your message" rows="10">
+</textarea>
+              </div>
+              <input name="partner-lead-contact" type="submit" value="Submit" role="button" class="primary-button partner-splash-button"></input>
+            </form>
+        </div>
+    </div>
+  </div>
+
+
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/bootstrap.native/2.0.6/bootstrap-native.min.js"></script>
+    <!-- js to pdf CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <%= javascript_include_tag 'partner' %>
+    <%= javascript_include_tag 'partner_main' %>
+  </body>
+</html>
