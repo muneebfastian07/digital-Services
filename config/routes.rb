@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   #signup
   get 'signup' => 'signup#index'
   get 'signup/terms' => 'signup#terms'
+  post '/sign_up' => 'signup#sign_up'
 
   # login
   get 'login' => 'login#index'
@@ -43,4 +44,10 @@ Rails.application.routes.draw do
   get '/blog/ellen-pao-on-solving-techs-diversity-challenges', to: 'blog#ellen'
   get '/blog/creating-a-world-class-office-experience-with-hivy', to: 'blog#creating'
   get '/blog/efficiency-for-every-office', to: 'blog#efficiency'
+
+  #dashboard
+  get 'dashboard' => 'dashboard#home'
+  get 'dashboard/orders' => 'dashboard#orders'
+  get 'dashboard/schedule' => 'dashboard#schedule'
+  get 'dashboard/support' => 'dashboard#support'
 end
