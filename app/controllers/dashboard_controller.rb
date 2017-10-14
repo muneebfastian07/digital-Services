@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
   def home
+    @current_user = Office.find(session[:office_id])
     render 'home', layout: false
   end
 

@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get 'login' => 'login#index'
   get 'login/office' => 'login#office'
   get 'login/partners' => 'login#partners'
+  post 'login/log_in' => 'login#log_in'
+  delete 'logout' => 'login#destroy'
 
   # customer_stories
   get 'customer-stories' => 'customer_stories#index'
@@ -45,9 +47,15 @@ Rails.application.routes.draw do
   get '/blog/creating-a-world-class-office-experience-with-hivy', to: 'blog#creating'
   get '/blog/efficiency-for-every-office', to: 'blog#efficiency'
 
-  #dashboard
+  # dashboard
   get 'dashboard' => 'dashboard#home'
   get 'dashboard/orders' => 'dashboard#orders'
   get 'dashboard/schedule' => 'dashboard#schedule'
   get 'dashboard/support' => 'dashboard#support'
+
+  #categories
+  get 'categories/category/:id' => 'categories#category'
+
+  # services
+  get 'services/service/:id' => 'services#service'
 end
