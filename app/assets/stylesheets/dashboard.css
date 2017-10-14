@@ -5,3 +5,7 @@
 .intercom-launcher-frame{
   display: none !important;
 }
+
+.hide{
+  display: none !important;
+}
