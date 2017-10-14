@@ -2,7 +2,7 @@
   display: none;
 }
 
-.intercom-launcher-frame{
+.intercom-launcher-frame, .intercom-launcher{
   display: none !important;
 }
 

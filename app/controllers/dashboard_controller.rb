@@ -15,4 +15,8 @@ class DashboardController < ApplicationController
   def support
     render 'support', layout: false
   end
+
+  def action
+    redirect_to dashboard_path
+  end
 end
