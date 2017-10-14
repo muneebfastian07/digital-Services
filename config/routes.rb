@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   get 'dashboard/orders' => 'dashboard#orders'
   get 'dashboard/schedule' => 'dashboard#schedule'
   get 'dashboard/support' => 'dashboard#support'
+  get 'dashboard/account' => 'dashboard#account'
 
   #categories
   get 'categories/category/:id' => 'categories#category'

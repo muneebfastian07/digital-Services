@@ -16,7 +16,8 @@ class DashboardController < ApplicationController
     render 'support', layout: false
   end
 
-  def action
-    redirect_to dashboard_path
+  def account
+    @current_user = Office.find(session[:office_id])
+    render 'account', layout: false
   end
 end
