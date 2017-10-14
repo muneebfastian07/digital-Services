@@ -22,8 +22,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'pg'
 gem 'jquery-rails'
 gem 'bootstrap'
-gem "camaleon_cms",  '>= 2.4.4.5'
-gem 'draper', github: 'drapergem/draper'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
