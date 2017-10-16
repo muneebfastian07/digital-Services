@@ -64,5 +64,6 @@ Rails.application.routes.draw do
   namespace :admin do
   root 'admin#index'
     resources :users
+    resources :sections
   end
 end

@@ -1,0 +1,2 @@
+class HomeSection < ApplicationRecord
+end

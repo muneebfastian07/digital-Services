@@ -2,11 +2,12 @@
     
 <div class="home-hero unit-hero">
   <div class="hero-content">
-    <h1 class="hero-headline">We make it easy to run your office</h1>
-    <p class="hero-subheadline">Join the thousands of companies who use Managed by Q to handle everything from carpet cleaning to appliance repair.</p>
+    <%home=find_section('home_headline')%>
+    <h1 class="hero-headline"><%=home.title rescue 'We make it easy to run your office'%></h1>
+    <p class="hero-subheadline"><%=home.subtitle rescue 'Join the thousands of companies who use Managed by Q to handle everything from carpet cleaning to appliance repair.'%></p>
     <div class="hero-btn-wrapper">
-      <a class="btn btn-primary" href="/signup">
-        Get Started
+      <a class="btn btn-primary" href="<%=home.link_path rescue '/signup#index'%>">
+        <%=home.link_text rescue 'Get Started'%>
       </a>
     </div>
   </div>
