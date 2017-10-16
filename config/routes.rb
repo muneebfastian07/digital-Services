@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
+  get 'admin' => 'admin#index'
 
   get 'services' => 'services#index'
   get 'people' => 'people#index'
@@ -59,4 +61,8 @@ Rails.application.routes.draw do
 
   # services
   get 'services/service/:id' => 'services#service'
+  namespace :admin do
+  root 'admin#index'
+    resources :users
+  end
 end
