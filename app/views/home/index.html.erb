@@ -1,5 +1,5 @@
 <div class="page page-index">
-    
+
 <div class="home-hero unit-hero">
   <div class="hero-content">
     <%home=find_section('home_headline')%>
@@ -14,57 +14,57 @@
 
   <div class="hero-cloud">
     <div class="cloud-row cloud-row-1">
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/flatiron-1.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/flatiron.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/barkbox.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/barkbox.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/youknow.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/youknow.png);"></div>
                   </div>
           </div>
     <div class="cloud-row cloud-row-2">
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/Sprout-Social-Office-Reception.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/sproutsocial.jpg);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/charitywater.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/charitywater.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/ticketfly-image.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/ticketfly.png);"></div>
                   </div>
           </div>
     <div class="cloud-row cloud-row-3">
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/seatgeek-1.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/seatgeek.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/Staples-Office.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/Staples-Logo.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/bond-street.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/bondstreet.png);"></div>
                   </div>
           </div>
     <div class="cloud-row cloud-row-4">
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/flatiron-2.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/flatiron.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/seatgeek-2.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/seatgeek.png);"></div>
                   </div>
-                      
+
         <div class="cloud-image-item" style="background-image: url(/assets/images/bond-street-2.jpg);">
                       <div class="cloud-logo" style="background-image: url(/assets/images/bondstreet.png);"></div>
                   </div>
@@ -75,8 +75,9 @@
 <div class="page-body-unit home-intro-blocks home-service-wrapper">
   <div class="home-services block">
     <div class="block-header center">
-      <h3 class="block-headline">Every office service you need, all in one place</h3>
-      <p class="block-subheadline">The search is over. Q offers solutions for every project in your space.</p>
+      <%service=find_section('home_service')%>
+      <h3 class="block-headline"><%=service.title rescue 'Every office service you need, all in one place' %></h3>
+      <p class="block-subheadline"><%=service.subtitle rescue 'The search is over. Q offers solutions for every project in your space.'%></p>
     </div>
     <div class="services-carousel carousel mobile-carousel">
                       <div class="service-card">
@@ -268,14 +269,16 @@
         </div>
           </div>
     <div class="block-cta">
-      <a class="btn btn-primary" href="/services">View more services</a>
+    <a class="btn btn-primary" href="<%=service.link_path rescue '/services'%>">
+      <%=service.link_text rescue 'View more services'%>
+    </a>
     </div>
   </div>
 </div>
 
 <div class="page-body page-body-unit home-intro-blocks">
   <div class="home-features">
-                
+
       <div class="block block-split home-feature home-feature-1 media-right" id="home-feature-1">
         <div class="block-split-content">
           <div class="content-wrapper">
@@ -298,15 +301,15 @@
                       <div class="media-image mobile" style="background-image: url(/assets/images/Homepage-Section-1-Mobile.jpg);"></div>
                                 <div class="media-image desktop" style="background-image: url(/assets/images/Homepage-Section-1-Desktop.jpg);"></div>
             <div class="media-image desktop retina" style="background-image: url(/assets/images/Homepage-Section-1-Desktop.jpg);"></div>
-          
+
                       <div class="animation-block-1">
               <h3 class="animation-block-text">Quotes for Install light fixtures</h3>
               <div class="animation-block-vendor-1 card-1"></div>
               <div class="animation-block-vendor-2 card-2"></div>
               <div class="animation-block-vendor-3 card-3"></div>
             </div>
-          
-          
+
+
                   </div>
 
                   <div class="customer-quote customer-quote-mini mobile">
@@ -317,7 +320,7 @@
             </div>
           </div>
               </div>
-                
+
       <div class="block block-split home-feature home-feature-2 media-left" id="home-feature-2">
         <div class="block-split-content">
           <div class="content-wrapper">
@@ -340,14 +343,14 @@
                       <div class="media-image mobile" style="background-image: url(/assets/images/Homepage-Section-2-Mobile.jpg);"></div>
                                 <div class="media-image desktop" style="background-image: url(/assets/images/Homepage-Section-2-Desktop.jpg);"></div>
             <div class="media-image desktop retina" style="background-image: url(/assets/images/Homepage-Section-2-Desktop.jpg);"></div>
-          
-          
+
+
                       <div class="animation-block-2">
               <div class="animation-block-card-1 card-1"></div>
               <div class="animation-block-card-2 card-2"></div>
               <div class="animation-block-card-3 card-3"></div>
             </div>
-          
+
                   </div>
 
                   <div class="customer-quote customer-quote-mini mobile">
@@ -358,7 +361,7 @@
             </div>
           </div>
               </div>
-                
+
       <div class="block block-split home-feature home-feature-3 media-right" id="home-feature-3">
         <div class="block-split-content">
           <div class="content-wrapper">
@@ -381,9 +384,9 @@
                       <div class="media-image mobile" style="background-image: url(/assets/images/Homepage-Section-3-Mobile.jpg);"></div>
                                 <div class="media-image desktop" style="background-image: url(/assets/images/Homepage-Section-3-Desktop.jpg);"></div>
             <div class="media-image desktop retina" style="background-image: url(/assets/images/Homepage-Section-3-Desktop.jpg);"></div>
-          
-          
-          
+
+
+
                       <div class="animation-manage-card animation-manage-card-1">
               <div class="manage-card"></div>
               <div class="circle circle-1 circle-unchecked"></div>
@@ -408,16 +411,17 @@
             </div>
           </div>
               </div>
-      </div> </div> 
+      </div> </div>
 
 <div class="block block-customer-stories">
   <div class="block-header center">
-    <h3 class="block-headline">See what it&#039;s like to be Managed by Q</h3>
-    <p class="block-subheadline">Don&#039;t take our word for it—check our references. Learn how top companies use Q to run their office.</p>
+    <%story=find_section('home_stories')%>
+    <h3 class="block-headline"><%=story.title.html_safe rescue 'See what it&#039;s like to be Managed by Q'%></h3>
+    <p class="block-subheadline"><%=story.subtitle.html_safe rescue 'Don&#039;t take our word for it—check our references. Learn how top companies use Q to run their office.'%></p>
   </div>
 
   <div class="customer-stories-card-carousel carousel">
-          
+
 <div class="customer-quote customer-quote-card card-1">
   <a class="card-wrapper click-wrapper" href="/customer-stories/staples-print-facility">
     <div class="customer-quote-media">
@@ -430,7 +434,7 @@
     </div>
   </a>
 </div>
-          
+
 <div class="customer-quote customer-quote-card card-2">
   <a class="card-wrapper click-wrapper" href="/customer-stories/bond-street">
     <div class="customer-quote-media">
@@ -443,7 +447,7 @@
     </div>
   </a>
 </div>
-          
+
 <div class="customer-quote customer-quote-card card-3">
   <a class="card-wrapper click-wrapper" href="/customer-stories/charity-water">
     <div class="customer-quote-media">
@@ -459,7 +463,7 @@
       </div>
 
   <div class="customer-stories-card-grid">
-          
+
 <div class="customer-quote customer-quote-card card-1">
   <a class="card-wrapper click-wrapper" href="/customer-stories/staples-print-facility">
     <div class="customer-quote-media">
@@ -472,7 +476,7 @@
     </div>
   </a>
 </div>
-          
+
 <div class="customer-quote customer-quote-card card-2">
   <a class="card-wrapper click-wrapper" href="/customer-stories/bond-street">
     <div class="customer-quote-media">
@@ -485,7 +489,7 @@
     </div>
   </a>
 </div>
-          
+
 <div class="customer-quote customer-quote-card card-3">
   <a class="card-wrapper click-wrapper" href="/customer-stories/charity-water">
     <div class="customer-quote-media">
@@ -500,15 +504,16 @@
 </div>
       </div>
 
-  <a class="btn btn-secondary" href="/customer-stories">See More Stories</a>
+  <a class="btn btn-secondary" href="<%=story.link_path rescue '/customer-stories'%>"><%= story.link_text rescue 'show more stories'%></a>
 
   <div class="customer-logo-bar">
       </div>
 </div>
 <div class="block home-guarantee">
-  <h3 class="block-headline">Let&#039;s make the world work better</h3>
-  <p class="block-subheadline">We&#039;re on a mission to build a better future where technology creates good jobs for everyone.</p>
-  <a class="inline-link" href="/careers">Join Us &rarr;</a>
+  <%join=find_section('home_joins')%>
+  <h3 class="block-headline"><%=join.title.html_safe rescue ' Let make the world work better'%></h3>
+  <p class="block-subheadline"><%=join.subtitle.html_safe rescue'We&#039;re on a mission to build a better future where technology creates good jobs for everyone.'%></p>
+  <a class="inline-link" href="<%=join.link_path rescue'/careers'%>"><%=join.link_text.html_safe rescue 'Join Us &rarr;'%></a>
 </div>
 
 
