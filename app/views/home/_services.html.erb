@@ -1,0 +1,114 @@
+<div class="page-body-unit home-intro-blocks home-service-wrapper">
+  <div class="home-services block">
+    <div class="block-header center">
+      <%service=find_section('home_service')%>
+      <h3 class="block-headline"><%=service.title rescue 'Every office service you need, all in one place' %></h3>
+      <p class="block-subheadline"><%=service.subtitle rescue 'The search is over. Q offers solutions for every project in your space.'%></p>
+    </div>
+    <div class="services-carousel carousel mobile-carousel">
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-3">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-Furniture-Assembly.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Furniture assembly</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-1">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-Office-Cleaning.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Office cleaning</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-2">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Plumbing-Repair.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Plumbing repair</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-5">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-Relocation.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Moving services</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-2">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-HVAC.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">HVAC service</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-3">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-Snack-Replenishment.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Supply stocking</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-6">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-Admin-Support-2.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Administrative support</h4>
+          </div>
+        </a>
+      </div>
+      <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-4">
+          <div class="service-card-media">
+            <span class="service-card-thumb mobile" style="background-image: url(/assets/images/Services-IT-Security.jpg);"></span>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title">Access control setup</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="services-carousel carousel desktop-carousel">
+    <% @services.each do |service|%>
+    <div class="service-card">
+        <a class="card-wrapper click-wrapper" href="/services#category-3">
+          <div class="service-card-media">
+            <span class="service-card-thumb tablet" style="background-image: url(<%=service.image.url%>);"></span>
+            <span class="service-card-thumb desktop" style="background-image: url(<%=service.image.url%>);"></span>
+            <span class="service-card-thumb desktop retina" style="background-image: url(<%=service.image.url%>);"></span>
+            <h5 class="service-card-cta inline-link">Learn More &rarr;</h5>
+          </div>
+          <div class="service-card-content">
+            <h4 class="service-card-title"><%=service.name%></h4>
+          </div>
+        </a>
+      </div>
+    <%end%>
+    </div>
+    <div class="block-cta">
+      <a class="btn btn-primary" href="<%=service.link_path rescue '/services'%>">
+        <%=service.link_text rescue 'View more services'%>
+      </a>
+    </div>
+  </div>
+</div>

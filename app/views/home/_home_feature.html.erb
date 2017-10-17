@@ -1,0 +1,50 @@
+<div class="page-body page-body-unit home-intro-blocks">
+	<div class="home-features">
+<%@homefeatures.each_with_index do |feature, index|%>
+
+		<div class="block block-split home-feature home-feature-1 <%= cycle('media-right', 'media-left') -%>" id="home-feature-1">
+			<div class="block-split-content">
+				<div class="content-wrapper">
+					<div class="block-header">
+						<h2 class="block-headline">You&#039;ve got options</h2>
+						<p class="block-subheadline">With Q’s network of partners, choose the provider that&#039;s right for your project and our experts will handle the rest.</p>
+						<a class="inline-link" href="/services">See What Q Can Do &rarr;</a>
+					</div>
+					<div class="customer-quote customer-quote-mini desktop">
+						<img class="quote-thumb" src="/assets/images/bondstreet-sm.jpg">
+						<div class="quote-content">
+							<p class="quote-quote small">Q is there within the blink of an eye for whatever we need.</p>
+							<p class="quote-caption">Zac at Bond Street</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-split-media">
+				<div class="media-image mobile" style="background-image: url(/assets/images/Homepage-Section-1-Mobile.jpg);"></div>
+				<div class="media-image desktop" style="background-image: url(/assets/images/Homepage-Section-1-Desktop.jpg);"></div>
+				<div class="media-image desktop retina" style="background-image: url(/assets/images/Homepage-Section-1-Desktop.jpg);"></div>
+
+				<div class="animation-block-1">
+					<h3 class="animation-block-text">Quotes for Install light fixtures</h3>
+					<div class="animation-block-vendor-1 card-1"></div>
+					<div class="animation-block-vendor-2 card-2"></div>
+					<div class="animation-block-vendor-3 card-3"></div>
+				</div>
+
+
+			</div>
+
+			<div class="customer-quote customer-quote-mini mobile">
+				<img class="quote-thumb" src="/assets/images/bondstreet-sm.jpg">
+				<div class="quote-content">
+					<p class="quote-quote small">Q is there within the blink of an eye for whatever we need.</p>
+					<p class="quote-caption">Zac at Bond Street</p>
+				</div>
+			</div>
+		</div>
+<%end%>
+
+
+
+	</div> </div>
