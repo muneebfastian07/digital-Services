@@ -14,8 +14,8 @@
             <h5 class="customer-quote-cta inline-link">Read Full Story &rarr;</h5>
     </div>
     <div class="customer-quote-content">
-      <h4 class="customer-quote-person">Jennifer at Staples Print Facility</h4>
-      <p class="small">Staples trusts Q to keep their production facility clean and to help manage a fast-moving workspace. </p>
+      <h4 class="customer-quote-person"><%=story.quote_person rescue 'Jennifer at Staples Print Facility'%></h4>
+      <p class="small"><%= story.quote_text rescue 'Staples trusts Q to keep their production facility clean and to help manage a fast-moving workspace.'%> </p>
     </div>
   </a>
 </div>

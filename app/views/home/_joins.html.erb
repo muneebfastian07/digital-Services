@@ -1,0 +1,22 @@
+<div class="block home-guarantee">
+  <%join=find_section('home_joins')%>
+  <h3 class="block-headline"><%=join.title.html_safe rescue ' Let make the world work better'%></h3>
+  <p class="block-subheadline"><%=join.subtitle.html_safe rescue'We&#039;re on a mission to build a better future where technology creates good jobs for everyone.'%></p>
+  <a class="inline-link" href="<%=join.link_path rescue'/careers'%>"><%=join.link_text.html_safe rescue 'Join Us &rarr;'%></a>
+</div>
+
+
+<div class="block block-split block-story-promo media-left">
+  <div class="block-split-media">
+          <div class="media-image mobile" style="background-image: url(/assets/images/Global-CTA-Sales-Promo-Mobile.jpg);"></div>
+              <div class="media-image desktop" style="background-image: url(/assets/images/Global-CTA-Sales-Promo-Desktop.jpg);"></div>
+      <div class="media-image desktop retina" style="background-image: url(/assets/images/Global-CTA-Sales-Promo-Desktop.jpg);"></div>
+      </div>
+  <div class="block-split-content">
+    <div class="content-wrapper">
+      <h2 class="block-headline">Being in the office doesn&#039;t have to feel like work.</h2>
+      <p class="block-subheadline">We can help make your office a place your team will want to work in—even on Mondays.</p>
+      <a class="inline-link" href="/signup">Learn More &rarr;</a>
+    </div>
+  </div>
+</div>
