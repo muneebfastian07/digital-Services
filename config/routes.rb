@@ -65,5 +65,6 @@ Rails.application.routes.draw do
   root 'admin#index'
     resources :users
     resources :sections
+    resources :services
   end
 end
