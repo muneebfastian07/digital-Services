@@ -1,8 +1,8 @@
 <div class="block block-customer-stories">
   <div class="block-header center">
-    <%story=find_section('home_stories')%>
-    <h3 class="block-headline"><%=story.title.html_safe rescue 'See what it&#039;s like to be Managed by Q'%></h3>
-    <p class="block-subheadline"><%=story.subtitle.html_safe rescue 'Don&#039;t take our word for it—check our references. Learn how top companies use Q to run their office.'%></p>
+    <%story_section=find_section('home_stories')%>
+    <h3 class="block-headline"><%=story_section.title.html_safe rescue 'See what it&#039;s like to be Managed by Q'%></h3>
+    <p class="block-subheadline"><%=story_section.subtitle.html_safe rescue 'Don&#039;t take our word for it—check our references. Learn how top companies use Q to run their office.'%></p>
   </div>
 
   <div class="customer-stories-card-carousel carousel">
@@ -48,46 +48,22 @@
       </div>
 
   <div class="customer-stories-card-grid">
-
+<%@stories.each do |story|%>
 <div class="customer-quote customer-quote-card card-1">
   <a class="card-wrapper click-wrapper" href="/customer-stories/staples-print-facility">
     <div class="customer-quote-media">
-              <span class="customer-quote-thumb" style="background-image: url(/assets/images/StaplesPrint-Jen-Desktop.jpg);"></span>
+              <span class="customer-quote-thumb" style="background-image: url(<%=story.image.url rescue '/assets/images/StaplesPrint-Jen-Desktop.jpg'%>);"></span>
             <h5 class="customer-quote-cta inline-link">Read Full Story &rarr;</h5>
     </div>
     <div class="customer-quote-content">
-      <h4 class="customer-quote-person">Jennifer at Staples Print Facility</h4>
-      <p class="small">Staples trusts Q to keep their production facility clean and to help manage a fast-moving workspace. </p>
+      <h4 class="customer-quote-person"><%=story.title.html_safe rescue 'Jennifer at Staples Print Facility'%></h4>
+      <p class="small"><%= story.description.html_safe rescue 'Staples trusts Q to keep their production facility clean and to help manage a fast-moving workspace.'%> </p>
     </div>
   </a>
 </div>
+<%end%>
 
-<div class="customer-quote customer-quote-card card-2">
-  <a class="card-wrapper click-wrapper" href="/customer-stories/bond-street">
-    <div class="customer-quote-media">
-              <span class="customer-quote-thumb" style="background-image: url(/assets/images/bondstreet-desktop.jpg);"></span>
-            <h5 class="customer-quote-cta inline-link">Read Full Story &rarr;</h5>
-    </div>
-    <div class="customer-quote-content">
-      <h4 class="customer-quote-person">Zac at Bond Street</h4>
-      <p class="small">By using Q, Bond Street created an office atmosphere where employee satisfaction is sky-high.</p>
-    </div>
-  </a>
 </div>
-
-<div class="customer-quote customer-quote-card card-3">
-  <a class="card-wrapper click-wrapper" href="/customer-stories/charity-water">
-    <div class="customer-quote-media">
-              <span class="customer-quote-thumb" style="background-image: url(/assets/images/charitywater-desktop.jpg);"></span>
-            <h5 class="customer-quote-cta inline-link">Read Full Story &rarr;</h5>
-    </div>
-    <div class="customer-quote-content">
-      <h4 class="customer-quote-person">Jordan at charity: water</h4>
-      <p class="small">With Q’s help managing big-ticket donor events, charity: water kept costs down and contributions up.</p>
-    </div>
-  </a>
-</div>
-      </div>
 
   <a class="btn btn-secondary" href="<%=story.link_path rescue '/customer-stories'%>"><%= story.link_text rescue 'show more stories'%></a>
 

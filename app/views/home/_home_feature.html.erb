@@ -11,10 +11,10 @@
 						<a class="inline-link" href="/services"><%=feature.link_text.html_safe rescue 'See what Q can do &rarr;'%></a>
 					</div>
 					<div class="customer-quote customer-quote-mini desktop">
-						<img class="quote-thumb" src="<%=feature.image.url(:thumb)%>">
+						<img class="quote-thumb" src="<%=feature.testimonial_image.url(:thumb)%>">
 						<div class="quote-content">
-							<p class="quote-quote small"><%=feature.testimonila_remarks rescue 'Q is there within the blink of an eye for whatever we need.'%></p>
-							<p class="quote-caption"><%=feature.testimonila_name rescue 'Zac at Bond Street	'%></p>
+							<p class="quote-quote small"><%=feature.testimonila_remarks.html_safe rescue 'Q is there within the blink of an eye for whatever we need.'%></p>
+							<p class="quote-caption"><%=feature.testimonila_name.html_safe rescue 'Zac at Bond Street	'%></p>
 						</div>
 					</div>
 				</div>
